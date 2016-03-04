@@ -1,0 +1,15 @@
+modules {
+  module {
+    name = "coretemp"
+    language = "python"
+  }
+}
+
+collection_group {
+  collect_every = 60
+  time_threshold = 120
+  metric {
+    name_match = "Core(.+)"
+    title = "CPU Core Temperature"
+  }
+}

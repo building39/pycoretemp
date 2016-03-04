@@ -1,0 +1,16 @@
+modules {
+  module {
+    name = "cputemp"
+    language = "python"
+  }
+}
+
+collection_group {
+  collect_every = 10
+  time_threshold = 30
+  metric {
+    name_match = "Core (.+)"
+    value_threshold = 82.0
+  }
+}
+

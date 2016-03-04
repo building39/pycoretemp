@@ -1,0 +1,16 @@
+modules {
+  module {
+    name = "hddtemp"
+    language = "python"
+  }
+}
+
+collection_group {
+  collect_every = 10
+  time_threshold = 30
+  metric {
+    name_match = "Drive (.+)"
+    value_threshold = 82.0
+  }
+}
+
